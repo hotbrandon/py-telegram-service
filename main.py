@@ -6,7 +6,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-app = FastAPI()
+app = FastAPI(
+    title="Telegram Notification Service",
+    version="1.0.0",
+    description="Simple service to send Telegram notifications"
+)
 
 class Notification(BaseModel):
     message: str
