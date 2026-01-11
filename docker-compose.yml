@@ -1,0 +1,10 @@
+services:
+  telegram-api:
+    build:
+      context: .
+    container_name: telegram-service
+    ports:
+      - "${API_PORT}:${API_PORT}"
+    env_file:
+      - .env
+    restart: unless-stopped
